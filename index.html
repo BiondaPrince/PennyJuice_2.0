@@ -6,36 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pennyjuice</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <!-- NAV BAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="img/pennyjuice-logo-462w.webp" alt="Pennyjuice" 
-                class="img-fluid" style="width:200px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">US</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Order Now</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Learn More</a>
-            </li>
-            </ul>
-        </div>
+            <a class="navbar-brand" href="#">
+                <img src="img/pennyjuice-logo-462w.webp" alt="Pennyjuice" class="img-fluid" style="width:200px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Learn More</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
+
+    <!-- CARD'S -->
+    <div class="p-3 mb-2 bg-warning">
+        <div class="container my-5">
+            <div class="row g-4">
+
+                <!-- TARJETA 1 -->
+                <div class="col-md-4 d-flex">
+                    <div class="card shadow-lg border-dark text-center h-100">
+                        <img src="img/card1.webp" class="card-img-top fixed-img" alt="sabores-arcoiris">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Rainbows of exciting flavors!</h5>
+                            <p class="card-text">Discover our selection of 15 juices, including 7 color-free juices.
+                                Each box contains six half-gallon bottles of your choice. Ideal for daycare centers,
+                                preschools, elementary schools, and middle schools.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TARJETA 2 -->
+                <div class="col-md-4 d-flex">
+                    <div class="card shadow-lg border-dark text-center h-100">
+                        <img src="img/card2.webp" class="card-img-top fixed-img" alt="jugo-saludable">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Juice concentrates for schools</h5>
+                            <p class="card-text">The beverage your school has been waiting for! Our juice concentrates
+                                meet USDA and FDA regulations and require no refrigeration.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TARJETA 3 -->
+                <div class="col-md-4 d-flex">
+                    <div class="card shadow-lg border-dark text-center h-100">
+                        <img src="img/card3.webp" class="card-img-top fixed-img" alt="cumplimiento-fda">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">The Smart Choice for Daycare: Penny Juice</h5>
+                            <p class="card-text">Our concentrates meet CACFP and USDA requirements. With an easy-to-use
+                                system and mixing jugs for cost control, they're the perfect solution for nurseries.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 col-5 mx-auto">
+                    <a href="#" class="btn btn-danger">Learn More</a>
+                    <a href="#" class="btn btn-success">Get in Touch</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <div class="container">
@@ -75,4 +126,5 @@
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
