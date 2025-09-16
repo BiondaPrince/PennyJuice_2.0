@@ -11,82 +11,50 @@
 
 <body>
     <!-- NAV BAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="https://i.ibb.co/Dgjnc4Zg/logofinal.png" alt="Pennyjuice" class="img-fluid"
-                    style="width: 180px;">
+                <img src="img/pennyjuice-logo-462w.webp" alt="Pennyjuice" class="img-fluid" style="width: 180px;" >
             </a>
-            <!--bototn modal/login-->
+                        <!--bototn modal/login-->
+           <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+            <img src="img/iconlogin.png" alt="" height="38" >
+           </button>
 
+           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="recipient-email" class="col-form-label">Email</label>
+            <input type="email" id="email" class="form-control" id="recipient-email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Password</label>
+             <input type="password" class="form-control" id="recipient-password" name="password" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" form="loginForm">Login</button>
+      </div>
+    </div>
+    </div>
+</div>  
 
-
-            <!-- Modal Login -->
-            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="loginLabel">Login</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Cerrar"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="loginForm">
-                                <div class="mb-3">
-                                    <label for="login-email" class="col-form-label">Email</label>
-                                    <input type="email" class="form-control" id="login-email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="login-password" class="col-form-label">Password</label>
-                                    <input type="password" class="form-control" id="login-password" required>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <!-- Botón que abre el modal de Register -->
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
-                                data-bs-target="#registerModal" data-bs-dismiss="modal">Register</button>
-                            <!-- Botón Login -->
-                            <button type="submit" class="btn btn-primary" form="loginForm">Login</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal Register -->
-            <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="registerLabel">Register</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Cerrar"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="registerForm">
-                                <div class="mb-3">
-                                    <label for="reg-email" class="col-form-label">Email</label>
-                                    <input type="email" class="form-control" id="reg-email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="reg-password" class="col-form-label">Password</label>
-                                    <input type="password" class="form-control" id="reg-password" required>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-success" form="registerForm">Register</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!--fin modal-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4">
                     <li class="nav-item">
                         <a class="nav-link active" href="#">US</a>
@@ -97,58 +65,52 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Learn More</a>
                     </li>
+                    <li>
                 </ul>
-                <button type="button" class="p-0 border-0 bg-transparent ms-lg-3" data-bs-toggle="modal"
-                    data-bs-target="#loginModal">
-                    <img src="img/1.png" alt="perfil" height="35">
-                </button>
             </div>
         </div>
     </nav>
+ 
+<!--Carrusel-->
 
-    <!--Carrusel-->
-
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="3000">
-                <img src="img/ban1.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <div class="d-grid col-3 mx-auto">
-                        <button class="btn btn-danger" type="button">Order Now</button>
-                    </div>
-                </div>
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="3000">
+      <img src="img/ban1.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+            <div class="d-grid col-3 mx-auto">
+              <button class="btn btn-danger" type="button">Order Now</button>
             </div>
-            <div class="carousel-item" data-bs-interval="3000">
-                <img src="img/ban2.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <div class="d-grid col-3 mx-auto">
-                        <button class="btn btn-danger" type="button">Order Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="img/ban3.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <div class="d-grid col-3 mx-auto">
-                        <button class="btn btn-danger" type="button">Order Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+          </div>
     </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="img/ban2.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+            <div class="d-grid col-3 mx-auto">
+              <button class="btn btn-danger" type="button">Order Now</button>
+            </div>
+          </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/ban3.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+            <div class="d-grid col-3 mx-auto">
+              <button class="btn btn-danger" type="button">Order Now</button>
+            </div>
+          </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
     <!-- CARD'S -->
-    <div class="p-3 mb-2" style="background-color: #f7de53;">
-
+    <div class="p-3 mb-2 bg-warning">
         <div class="container my-5">
             <div class="row g-4">
 
@@ -189,10 +151,47 @@
                     </div>
                 </div>
 
-                <div class="d-grid gap-2 col-5 mx-auto">
-                    <a href="#" class="btn btn-danger">Learn More</a>
-                    <a href="#" class="btn btn-success">Get in Touch</a>
-                </div>
+<div class="d-grid gap-2 col-5 mx-auto">
+    <a href="#" class="btn btn-danger">Learn More</a>
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo">
+        Get in Touch
+    </button>
+</div>
+
+<!-- Modal de Pedido -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Order Your Juice</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="orderForm">
+                     <div class="mb-3">
+                        <label for="juice-selection" class="col-form-label">Select Juice</label>
+                        <select class="form-control" id="juice-selection" required>
+                            <option value="orange">Orange Juice</option>
+                            <option value="apple">Apple Juice</option>
+                            <option value="mango">Mango Juice</option>
+                            <option value="berry">Berry Juice</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="quantity" class="col-form-label">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" min="1" value="1" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" form="orderForm">Place Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <!--finmd2-->
 
             </div>
         </div>
@@ -205,22 +204,22 @@
                 <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
                     <img src="img/pennyjuice-logo-462w.webp" style="width: 200px" alt="Logo">
                 </a>
-                <p class="text-muted">© 2025</p>
+                <p class="text-muted">© 2022</p>
             </div>
 
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                 <li class="ms-3">
-                    <a class="text-muted" href="https://www.facebook.com/PENNYJUICE/?ref=embed_page#" target="_blank">
+                    <a class="text-muted" href="https://www.facebook.com/PENNYJUICE/?ref=embed_page#"  target="_blank">
                         <img src="img/facebook.svg" width="30" height="30" alt="Twitter">
                     </a>
                 </li>
                 <li class="ms-3">
-                    <a class="text-muted" href="https://x.com/1PENNYJUICE" target="_blank">
+                    <a class="text-muted" href="https://x.com/1PENNYJUICE"  target="_blank">
                         <img src="img/twitter.svg" width="30" height="30" alt="Twitter">
                     </a>
                 </li>
                 <li class="ms-3">
-                    <a class="text-muted" href="mailto:pennyjuice@hotmail.com" target="_blank">
+                    <a class="text-muted" href="mailto:pennyjuice@hotmail.com"  target="_blank">
                         <img src="img/mail.svg" width="30" height="30" alt="Twitter">
                     </a>
                 </li>
