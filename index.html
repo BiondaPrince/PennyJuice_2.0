@@ -2,306 +2,359 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pennyjuice</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pennyjuice</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <!-- NAV BAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/pennyjuice-logo-462w.webp" alt="Pennyjuice" class="img-fluid" style="width: 180px;">
-            </a>
-            <!--bototn modal/login-->
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                data-bs-whatever="@mdo">
-                <img src="img/iconlogin.png" alt="" height="38">
+  <!-- NAV BAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="img/pennyjuice-logo-462w.webp" alt="Pennyjuice" class="img-fluid" style="width: 180px" />
+      </a>
+      <!--bototn modal/login-->
+      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+        <img src="img/iconlogin.png" alt="" height="38" />
+      </button>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="loginForm">
+                <div class="mb-3">
+                  <label for="recipient-email" class="col-form-label">Email</label>
+                  <input type="email" id="email" class="form-control" id="recipient-email" required />
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Password</label>
+                  <input type="password" class="form-control" id="recipient-password" name="password" required />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary" form="loginForm">
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--fin modal-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Order Now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Learn More</a>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CARRUSEL -->
+  <div id="bannerCarousel" class="carousel slide my-3" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/ban1.png" class="d-block w-100" alt="Banner 1" />
+      </div>
+      <div class="carousel-item">
+        <img src="img/ban2.png" class="d-block w-100" alt="Banner 2" />
+      </div>
+      <div class="carousel-item">
+        <img src="img/ban3.png" class="d-block w-100" alt="Banner 3" />
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- CARD'S -->
+  <div class="testimonial-slider my-3">
+    <div id="cardCarousel" class="carousel carousel-dark" data-bs-ride="carousel">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="testimonial-title">
+              <i class="bi bi-quote display-2"></i>
+              <h2 class="fw-bold display-6">RAINBOWS OF EXCITING FLAVORS!</h2>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
             </button>
-
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="loginForm">
-                                <div class="mb-3">
-                                    <label for="recipient-email" class="col-form-label">Email</label>
-                                    <input type="email" id="email" class="form-control" id="recipient-email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message-text" class="col-form-label">Password</label>
-                                    <input type="password" class="form-control" id="recipient-password" name="password"
-                                        required>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary" form="loginForm">Login</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--fin modal-->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">US</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Order Now</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Learn More</a>
-                    </li>
-                    <li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- CARRUSEL -->
-    <div id="bannerCarousel" class="carousel slide my-3" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/ban1.png" class="d-block w-100" alt="Banner 1">
-            </div>
-            <div class="carousel-item">
-                <img src="img/ban2.png" class="d-block w-100" alt="Banner 2">
-            </div>
-            <div class="carousel-item">
-                <img src="img/ban3.png" class="d-block w-100" alt="Banner 3">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-
-    <!-- CARD'S -->
-    <div class="testimonial-slider my-3">
-        <div id="cardCarousel" class="carousel carousel-dark" data-bs-ride="carousel">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="testimonial-title">
-                            <i class="bi bi-quote display-2"></i>
-                            <h2 class="fw-bold display-6">RAINBOWS OF EXCITING FLAVORS!</h2>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="img/Tarjeta1.png" class="d-block w-100"
-                                            alt="jugo-fresa"> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Strawberry Juice</h5>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <p class="card-text">"Refreshing and sweet, made with the natural flavor of ripe
-                                            strawberries. Perfect to enjoy at any time of day."</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="img/Tarjeta2.png" class="d-block w-100"
-                                            alt="jugo-naranja"> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Orange Juice</h5>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <p class="card-text">"Classic and energizing, made with juicy oranges that
-                                            provide freshness and a revitalizing citrus touch."</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="img/Tarjeta3.png" class="d-block w-100"
-                                            alt="jugo-pina"> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Pineapple Juice</h5>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <p class="card-text">"Exotic and tropical, with the unmistakable sweetness and
-                                            freshness of freshly squeezed pineapple. Ideal for cooling off."</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="img/Tarjeta4.png" class="d-block w-100"
-                                            alt="jugo-kiwi"> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Kiwi Juice</h5>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <p class="card-text">"Delicious and original, with the tangy and vibrant touch
-                                            of kiwi. A nutritious and refreshing option."</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="img/Tarjeta5.png" class="d-block w-100"
-                                            alt="jugo-arandano-azul"> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Blueberry Juice</h5>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <p class="card-text">"Sweet and antioxidant, full of the intense flavor of
-                                            blueberries. A drink that combines flavor and well-being."</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="img/Tarjeta6.png" class="d-block w-100"
-                                            alt="jugo-uva-morada"> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Grape Juice</h5>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <i class="bi bi-star-fill text-warning pe-1"></i>
-                                        <p class="card-text">"Smooth and naturally sweet, with the unmistakable flavor
-                                            of fresh grapes. A classic option that never fails."</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <div class="col-md-8">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="img/Tarjeta1.png" class="d-block w-100" alt="jugo-fresa" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Strawberry Juice</h5>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <p class="card-text">
+                      "Refreshing and sweet, made with the natural flavor of
+                      ripe strawberries. Perfect to enjoy at any time of day."
+                    </p>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container my-5">
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center">
-                <img src="img/Card4.png" class="img-fluid shadow-lg rounded-3" alt="Kids">
-            </div>
-            <div class="col-md-6 my-5">
-                <h2 class="fw-bold text-warning">Healthy Juice Concentrates for All Kids to Enjoy</h2>
-                <p class="text-muted">We provide a variety of flavors that all kids can enjoy! All the juice
-                    concentrates that we sell are compliant with the USDA and FDA guidelines. You don't need to
-                    refrigerate the concentrates before or after opening them.</p>
-                <div class="text-center my-3">
-                    <a href="#" class="btn btn-success">Learn more</a>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="img/Tarjeta2.png" class="d-block w-100" alt="jugo-naranja" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Orange Juice</h5>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <p class="card-text">
+                      "Classic and energizing, made with juicy oranges that
+                      provide freshness and a revitalizing citrus touch."
+                    </p>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container my-5">
-        <div class="row align-items-center">
-            <div class="col-md-6 order-2 order-md-1 text-center my-5">
-                <h2 class="fw-bold text-warning">Penny Juice Products Comply With All Requirements for CACFP, Subsidy,
-                    and Nutrition Set Forth by the FDA</h2>
-                <p class="text-muted">If you're running a childcare center and want to serve healthy beverages to kids
-                    every day, order quality juice concentrates from Penny Juice of America.
-                    Our system is fast and easy to use. Penny Juice greatly reduces storage and handling requirements. 1
-                    gallon pre-measured mix pitchers available to assure cost control and flavor consistency.</p>
-                <div class="text-center my-3">
-                    <a href="#" class="btn btn-success">Order Now</a>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="img/Tarjeta3.png" class="d-block w-100" alt="jugo-pina" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Pineapple Juice</h5>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <p class="card-text">
+                      "Exotic and tropical, with the unmistakable sweetness
+                      and freshness of freshly squeezed pineapple. Ideal for
+                      cooling off."
+                    </p>
+                  </div>
                 </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="img/Tarjeta4.png" class="d-block w-100" alt="jugo-kiwi" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Kiwi Juice</h5>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <p class="card-text">
+                      "Delicious and original, with the tangy and vibrant
+                      touch of kiwi. A nutritious and refreshing option."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="img/Tarjeta5.png" class="d-block w-100" alt="jugo-arandano-azul" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Blueberry Juice</h5>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <p class="card-text">
+                      "Sweet and antioxidant, full of the intense flavor of
+                      blueberries. A drink that combines flavor and
+                      well-being."
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card">
+                  <div class="img-wrapper">
+                    <img src="img/Tarjeta6.png" class="d-block w-100" alt="jugo-uva-morada" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Grape Juice</h5>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <i class="bi bi-star-fill text-warning pe-1"></i>
+                    <p class="card-text">
+                      "Smooth and naturally sweet, with the unmistakable
+                      flavor of fresh grapes. A classic option that never
+                      fails."
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-6 text-center order-1 order-md-2">
-                <img src="img/Card7.png" class="img-fluid shadow-lg rounded-3" alt="Kids">
-            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
-
-    <!-- FOOTER -->
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col mb-3">
-                <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                    <img src="img/pennyjuice-logo-462w.webp" style="width: 200px" alt="Logo">
-                </a>
-                <p class="text-muted">© 2022</p>
-            </div>
-
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3">
-                    <a class="text-muted" href="https://www.facebook.com/PENNYJUICE/?ref=embed_page#" target="_blank">
-                        <img src="img/facebook.svg" width="30" height="30" alt="Twitter">
-                    </a>
-                </li>
-                <li class="ms-3">
-                    <a class="text-muted" href="https://x.com/1PENNYJUICE" target="_blank">
-                        <img src="img/twitter.svg" width="30" height="30" alt="Twitter">
-                    </a>
-                </li>
-                <li class="ms-3">
-                    <a class="text-muted" href="mailto:pennyjuice@hotmail.com" target="_blank">
-                        <img src="img/mail.svg" width="30" height="30" alt="Twitter">
-                    </a>
-                </li>
-
-            </ul>
-            <p class="text-center text-muted">Privacy Policy
-                Manage Consent Preferences
-                | Do Not Share My Information | Conditions of Use | Notice and Take Down Policy | Website Accessibility
-                Policy
-                © 2025 The content on this website is owned by us and our licensors. Do not copy any content (including
-                images) without our consent.</p>
-        </footer>
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center">
+        <img src="img/Card4.png" class="img-fluid shadow-lg rounded-3" alt="Kids" />
+      </div>
+      <div class="col-md-6 my-5">
+        <h2 class="fw-bold text-warning">
+          Healthy Juice Concentrates for All Kids to Enjoy
+        </h2>
+        <p class="text-muted">
+          We provide a variety of flavors that all kids can enjoy! All the
+          juice concentrates that we sell are compliant with the USDA and FDA
+          guidelines. You don't need to refrigerate the concentrates before or
+          after opening them.
+        </p>
+        <div class="text-center my-3">
+          <a href="#" class="btn btn-success">Learn more</a>
+        </div>
+      </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+  </div>
+
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 order-2 order-md-1 text-center my-5">
+        <h2 class="fw-bold text-warning">
+          Penny Juice Products Comply With All Requirements for CACFP,
+          Subsidy, and Nutrition Set Forth by the FDA
+        </h2>
+        <p class="text-muted">
+          If you're running a childcare center and want to serve healthy
+          beverages to kids every day, order quality juice concentrates from
+          Penny Juice of America. Our system is fast and easy to use. Penny
+          Juice greatly reduces storage and handling requirements. 1 gallon
+          pre-measured mix pitchers available to assure cost control and
+          flavor consistency.
+        </p>
+        <div class="text-center my-3">
+          <a href="#" class="btn btn-success">Order Now</a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center order-1 order-md-2">
+        <img src="img/Card7.png" class="img-fluid shadow-lg rounded-3" alt="Kids" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white text-dark text-center mt-5 border-top">
+    <div class="container py-4">
+      <!-- Fila 1 -->
+      <div class="row mb-3">
+        <div class="col text-center">
+          <a href="/" class="d-inline-flex align-items-center mb-3 link-dark text-decoration-none">
+            <img src="img/pennyjuice-logo-462w.webp" style="width: 200px" alt="Logo" />
+          </a>
+
+          <p class="text-muted">
+            Sabor natural que te llena de energía.
+          </p>
+        </div>
+      </div>
+
+      <!-- Fila 2 -->
+      <div class="row mb-3">
+        <div class="col-md-4 mb-2">
+          <h6 class="fw-bold">Nosotros</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-secondary">Quiénes somos</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Misión</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Visión</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-2">
+          <h6 class="fw-bold">Servicios</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-secondary">Diseño</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Desarrollo</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Soporte</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-2">
+          <h6 class="fw-bold">Contacto</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-secondary">Email</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">WhatsApp</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Ubicación</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Fila 3 -->
+      <div class="row">
+        <div class="col">
+          <p class="mb-1 text-muted">
+            &copy; 2025 PENNY JUICE. Todos los derechos reservados.
+          </p>
+          <div>
+            <a href="#" class="text-dark mx-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-dark mx-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-dark mx-2"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
