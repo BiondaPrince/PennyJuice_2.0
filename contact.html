@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pennyjuice</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- NAV BAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #fff; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1)"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="https://i.ibb.co/Dgjnc4Zg/logofinal.png"
+            alt="Pennyjuice"
+            class="img-fluid"
+            style="width: 180px"
+          />
+        </a>
+
+        <button
+          type="button"
+          class="btn"
+          data-bs-toggle="modal"
+          data-bs-target="#loginModal"
+          aria-label="Abrir formulario de inicio de sesión"
+        >
+          <img src="img/1.png" alt="Iniciar sesión" height="38" />
+          <span class="visually-hidden">Login</span>
+        </button>
+
+        <!-- Modal Login -->
+        <div
+          class="modal fade"
+          id="loginModal"
+          tabindex="-1"
+          aria-labelledby="loginLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="loginLabel">Login</h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Cerrar"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form id="loginForm">
+                  <div class="mb-3">
+                    <label for="login-email" class="col-form-label"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="login-email"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="login-password" class="col-form-label"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="login-password"
+                      required
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <!-- Botón que abre el modal de Register -->
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#registerModal"
+                  data-bs-dismiss="modal"
+                >
+                  Register
+                </button>
+                <!-- Botón Login -->
+                <button type="submit" class="btn btn-primary" form="loginForm">
+                  Login
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Register -->
+        <div
+          class="modal fade"
+          id="registerModal"
+          tabindex="-1"
+          aria-labelledby="registerLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="registerLabel">Register</h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Cerrar"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form id="registerForm">
+                  <div class="mb-3">
+                    <label for="reg-email" class="col-form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="reg-email"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="reg-password" class="col-form-label"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="reg-password"
+                      required
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <!-- Botón que abre el modal de Login -->
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginModal"
+                  data-bs-dismiss="modal"
+                >
+                  Login
+                </button>
+                <!-- Botón Register -->
+                <button
+                  type="submit"
+                  class="btn btn-success"
+                  form="registerForm"
+                >
+                  Register
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Order Now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Learn More</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CARRUSEL -->
+    <div
+      id="bannerCarousel"
+      class="carousel slide my-3"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/ban3.png" class="d-block w-100" alt="Banner 3" />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#bannerCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#bannerCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <section class="py-5" style="background: #96b156">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">Contáctanos</h2>
+        <div class="row text-center mb-5">
+          <div class="col-md-4 mb-3">
+            <i class="bi bi-geo-alt-fill fs-1"></i>
+            <p class="mt-2">915 40th Ave, Bettendorf, IA 52722</p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <i class="bi bi-envelope-fill fs-1"></i>
+            <p class="mt-2">pennyjuice@hotmail.com</p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <i class="bi bi-telephone-fill fs-1"></i>
+            <p class="mt-2">
+              Phone: 563-386-1999 <br />
+              Mobile: 563-340-3661
+            </p>
+          </div>
+        </div>
+
+        <!-- FORMULARIO DE PEDIDO -->
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card shadow-lg">
+              <div class="card-body p-4">
+                <h4 class="card-title text-center mb-4">Haz tu Pedido</h4>
+                <form id="orderForm">
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="centerName" class="form-label"
+                        >Center Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="centerName"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="contactName" class="form-label"
+                        >Contact Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="contactName"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email" class="form-label"
+                        >E-mail Address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="address" class="form-label"
+                      >Street Address</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="address"
+                      required
+                    />
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="city" class="form-label">City</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="city"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-3">
+                      <label for="state" class="form-label">State</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="state"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-3">
+                      <label for="zip" class="form-label">Zip</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="zip"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <h5 class="text-success mb-3">Selecciona tus sabores:</h5>
+                  <div class="row row-cols-2 row-cols-md-3 g-3 mb-4">
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="apple"
+                      /><label for="apple" class="form-check-label"
+                        >APPLE</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="grape"
+                      /><label for="grape" class="form-check-label"
+                        >WHITE GRAPE</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="strawberry"
+                      /><label for="strawberry" class="form-check-label"
+                        >STRAWBERRY BANANA</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="kiwi"
+                      /><label for="kiwi" class="form-check-label"
+                        >STRAWBERRY KIWI</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="citrus"
+                      /><label for="citrus" class="form-check-label"
+                        >CITRUS PUNCH</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="peach"
+                      /><label for="peach" class="form-check-label"
+                        >PEACH MANGO</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-success btn-lg">
+                      Enviar Pedido
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-dark text-center border-top">
+      <div class="container py-4">
+        <div class="row mb-3">
+          <div class="col text-center">
+            <img
+              src="https://i.ibb.co/Dgjnc4Zg/logofinal.png"
+              style="width: 200px"
+              alt="Logo"
+            />
+            <p class="text-muted mt-2">
+              Sabor natural que te llena de energía.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p class="mb-1 text-muted">
+              &copy; 2025 PENNY JUICE. Todos los derechos reservados.
+            </p>
+            <div>
+              <a href="#" class="text-dark mx-2"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-dark mx-2"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="text-dark mx-2"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
