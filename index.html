@@ -27,10 +27,10 @@
             </button>
 
             <!-- Modal Login -->
-            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+             <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header bg-primary text-white">
                             <h1 class="modal-title fs-5" id="loginLabel">Login</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Cerrar"></button>
@@ -45,50 +45,18 @@
                                     <label for="login-password" class="col-form-label">Password</label>
                                     <input type="password" class="form-control" id="login-password" required>
                                 </div>
+                                <div class="d-flex justify-content-between">
+                                <a href="#" class="text-primary small">Forgot your password?</a>
+                             </div>
                             </form>
-                        </div>
-                        <div class="modal-footer">
-                            <!-- Botón que abre el modal de Register -->
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
-                                data-bs-target="#registerModal" data-bs-dismiss="modal">Register</button>
-                            <!-- Botón Login -->
+                              </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary" form="loginForm">Login</button>
+                                </div>
+                            </div>  
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Modal Register -->
-            <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="registerLabel">Register</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Cerrar"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="registerForm">
-                                <div class="mb-3">
-                                    <label for="reg-email" class="col-form-label">Email</label>
-                                    <input type="email" class="form-control" id="reg-email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="reg-password" class="col-form-label">Password</label>
-                                    <input type="password" class="form-control" id="reg-password" required>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <!-- Botón que abre el modal de Login -->
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
-                                data-bs-target="#loginModal" data-bs-dismiss="modal">Login</button>
-                            <!-- Botón Register -->
-                            <button type="submit" class="btn btn-success" form="registerForm">Register</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -275,7 +243,7 @@
                     concentrates that we sell are compliant with the USDA and FDA guidelines. You don't need to
                     refrigerate the concentrates before or after opening them.</p>
                 <div class="text-center my-3">
-                    <a href="#" class="btn btn-success">Learn more</a>
+                 <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal2">Learn more</a>
                 </div>
             </div>
         </div>
@@ -299,7 +267,38 @@
             </div>
         </div>
     </div>
-
+    <!-- Modal de Pedido -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Order Your Juice</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="orderForm">
+                     <div class="mb-3">
+                        <label for="juice-selection" class="col-form-label">Select Juice</label>
+                        <select class="form-control" id="juice-selection" required>
+                            <option value="orange">Orange Juice</option>
+                            <option value="apple">Apple Juice</option>
+                            <option value="mango">Mango Juice</option>
+                            <option value="berry">Berry Juice</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="quantity" class="col-form-label">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" min="1" value="1" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" form="orderForm">Place Order</button>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- TEXTO Y VIDEO -->
     <section class="py-5" style="background: #96b156;">
         <div class="container-fluid d-flex justify-content-center">
